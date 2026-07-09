@@ -35,3 +35,13 @@ export type Phase0JudgementDraft = {
   unsafeToActDirectly: boolean;
   humanReviewNote?: string;
 };
+
+export type Phase0EditableDraft = Phase0JudgementDraft & {
+  candidateSummary: string;
+  humanReviewTarget: string;
+  humanChallenge: string;
+};
+
+export type Phase0SavedDraft = Phase0EditableDraft & {
+  savedAt: string;
+};
